@@ -1,7 +1,4 @@
-import { build } from "vite";
 import path from "path";
-import { dirname } from "path";
-import { fileURLToPath } from "url";
 
 const BUNDLE_SUFFIX = "?bundle";
 
@@ -26,6 +23,7 @@ export default function bundleScriptsPlugin(viteConfig) {
 
         return `export default "/${serveId.toString()}";`;
       } else {
+        const { build } = await import("vite");
 
         const output = await build({
           ...viteConfig,

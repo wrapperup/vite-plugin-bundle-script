@@ -43,7 +43,7 @@
     "typescript",
     "javascript"
   ],
-  "dependencies": {
+  "devDependencies": {
     "vite": "^5.0.12"
   },
   "peerDependencies": {
