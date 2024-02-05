@@ -4,7 +4,6 @@ import { dirname } from "path";
 import { fileURLToPath } from "url";
 
 const BUNDLE_SUFFIX = "?bundle";
-const scriptLangsRE = /\.(jsx?|tsx?)\?bundle$/;
 
 export default function bundleScriptsPlugin(viteConfig) {
   let resolvedConfig;

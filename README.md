@@ -1,5 +1,5 @@
 # vite-plugin-bundle-scripts 📦
-Bundle your client/external Javascript and Typescript as assets with Vite!
+Bundle your client/external Javascript and Typescript modules as assets with Vite!
 
 [![npm](https://img.shields.io/npm/v/vite-plugin-bundle-scripts.svg)]()
 [![MIT/Apache 2.0](https://img.shields.io/badge/license-MIT%2FApache-blue.svg)](./LICENSE)
@@ -22,13 +22,13 @@ export default defineConfig({
 });
 ```
 
-Append `?bundle` to your imported script.
+Append `?bundle` to your imported module.
 ```js
-import clientScript from "./client.ts?bundle"
+import clientScript from "./client?bundle"
 
 function html() {
     // Just like any other asset, the asset's URL is provided.
-    return <script src={clientScript} />
+    return <script src={clientScript} type="module" />
 }
 ```
 
@@ -61,7 +61,7 @@ For example, when Vite transforms your imported Javascript:
 ```js
 // Asset is copied directly
 
-import clientScript from "./client/script.ts?url" 
+import clientScript from "./client/script?url" 
 // -> const clientScript = "/assets/script.ts"
 ```
 
@@ -69,7 +69,7 @@ vs `?bundle`
 ```js
 // Asset is bundled into Javascript with Vite
 
-import clientScript from "./client/script.ts?bundle"
+import clientScript from "./client/script?bundle"
 // -> const clientScript = "/assets/script.js"
 ```
 
