@@ -1,0 +1,56 @@
+{
+  "name": "vite-plugin-bundle-scripts",
+  "description": "Import and bundle Javascript and Typescript files as assets in Vite",
+  "homepage": "https://github.com/wrapperup/vite-plugin-bundle-scripts",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": false,
+  "author": {
+    "name": "Matthew Taylor",
+    "url": "https://github.com/wrapperup/"
+  },
+  "type": "module",
+  "main": "./src/index.js",
+  "module": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wrapperup/vite-plugin-bundle-scripts.git"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./ext": {
+      "types": "./ext.d.ts"
+    }
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "yarn.lock",
+    "ext.d.ts",
+    "LICENSE",
+    "src"
+  ],
+  "keywords": [
+    "vite",
+    "vitejs",
+    "plugin",
+    "vite-plugin",
+    "script",
+    "bundle",
+    "client",
+    "scripts",
+    "typescript",
+    "javascript"
+  ],
+  "dependencies": {
+    "vite": "^5.0.12"
+  },
+  "peerDependencies": {
+    "vite": "^3.0.0 || ^4.0.0 || ^5.0.0"
+  },
+  "engines": {
+    "node": ">= 16.15.1",
+    "npm": ">= 8.11.0"
+  }
+}

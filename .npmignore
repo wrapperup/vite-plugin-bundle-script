@@ -1,0 +1,7 @@
+*
+!*.d.ts
+!*.js
+
+!SECURITY.md
+!LICENSE
+!README.md
