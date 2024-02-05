@@ -16,7 +16,9 @@ import bundleScripts from 'vite-plugin-bundle-scripts';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  plugins: [bundleScripts()]
+  plugins: [bundleScripts({
+    // Vite configuration
+  })]
 });
 ```
 
