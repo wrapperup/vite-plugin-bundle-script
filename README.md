@@ -10,8 +10,6 @@ Bundle your client/external Javascript and Typescript modules as assets with Vit
 npm i vite-plugin-bundle-scripts --save-dev
 ```
 
-## Usage ##
-
 ```js
 // vite.config.js
 import bundleScripts from 'vite-plugin-bundle-scripts';
@@ -22,17 +20,24 @@ export default defineConfig({
 });
 ```
 
+## Usage ##
+
 Append `?bundle` to your imported module.
+
 ```js
 import clientScript from "./client?bundle"
 
-function html() {
-    // Just like any other asset, the asset's URL is provided.
-    return <script src={clientScript} type="module" />
-}
+// Just like any other asset, the asset's URL is provided.
+const jsx = <script src={clientScript} type="module" />
 ```
 
+Vite will now include this module as an asset. Think of it as a super-powered version of `?url` that
+also bundles your asset as an entrypoint.
+
 ### With TypeScript ###
+
+If you use Typescript, add one of these to let it become aware of
+the `?bundle` marker on imported modules.
 
 Add extension declarations to your [`types`](https://www.typescriptlang.org/tsconfig#types) in `tsconfig.json`:
 
@@ -50,27 +55,6 @@ or with a directive:
 
 ```ts
 /// <reference types="vite-plugin-bundle-scripts/ext" />
-```
-
-## Versus `?url`
-`?bundle` works just like `?url`, except it also bundles the imported asset through Vite, instead of just simply copying the asset.
-
-For example, when Vite transforms your imported Javascript:
-
-`?url`
-```js
-// Asset is copied directly
-
-import clientScript from "./client/script?url" 
-// -> const clientScript = "/assets/script.ts"
-```
-
-vs `?bundle`
-```js
-// Asset is bundled into Javascript with Vite
-
-import clientScript from "./client/script?bundle"
-// -> const clientScript = "/assets/script.js"
 ```
 
 ## What is this for?
