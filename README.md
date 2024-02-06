@@ -1,8 +1,8 @@
 # vite-plugin-bundle-scripts 📦
 Bundle your client/external Javascript and Typescript modules as assets with Vite!
 
-[![npm](https://img.shields.io/npm/v/vite-plugin-bundle-scripts.svg)]()
-[![MIT/Apache 2.0](https://img.shields.io/badge/license-MIT%2FApache-blue.svg)](./LICENSE)
+![NPM Version](https://img.shields.io/npm/v/vite-plugin-bundle-scripts)
+![NPM License](https://img.shields.io/npm/l/vite-plugin-bundle-scripts)
 
 ## Installation ##
 
