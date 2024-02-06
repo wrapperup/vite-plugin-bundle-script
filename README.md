@@ -33,7 +33,7 @@ import clientScript from "./client?bundle"
 const jsx = <script src={clientScript} type="module" />
 ```
 
-Vite will now include this module as an asset. Think of it as a super-powered version of `?url` that
+Vite will now include this module as an asset. Think of it as a super-powered version of [`?url`](https://vitejs.dev/guide/assets#explicit-url-imports) that
 also bundles your asset as an entrypoint.
 
 ### With TypeScript ###
